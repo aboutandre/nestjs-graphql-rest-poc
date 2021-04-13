@@ -1,0 +1,42 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Example API",
+    "version": "3.0.0"
+  },
+  "paths": {
+    "/api/hello": {
+      "get": {
+        "operationId": "helloQuery",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Query": {
+        "type": "object",
+        "required": [
+          "hello"
+        ],
+        "properties": {
+          "hello": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
